@@ -17,16 +17,11 @@ min-height:100vh;
 
 }
 
-/* LIGHT MODE */
+/* LIGHT MODE TEXT FIX */
 
 .light{
-
 background:#f1f5f9;
-
-color:#111827;
-
-}
-
+color:#
 
 /* HEADER */
 
@@ -367,5 +362,6 @@ backdrop-filter:blur(12px);
 canvas{
 
 filter:brightness(1.2);
+
 
 }
