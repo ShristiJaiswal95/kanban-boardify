@@ -1,0 +1,371 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Manrope',sans-serif;
+}
+
+/* DARK MODE */
+
+body{
+
+background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+
+color:#f8fafc;
+
+min-height:100vh;
+
+}
+
+/* LIGHT MODE */
+
+.light{
+
+background:#f1f5f9;
+
+color:#111827;
+
+}
+
+
+/* HEADER */
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 40px;
+
+background:rgba(255,255,255,0.05);
+
+backdrop-filter:blur(10px);
+
+}
+
+header h1{
+
+font-size:28px;
+font-weight:800;
+
+}
+
+.header-actions{
+
+display:flex;
+gap:10px;
+
+}
+
+#search{
+
+padding:8px 10px;
+
+border-radius:6px;
+
+border:none;
+
+outline:none;
+
+}
+
+button{
+
+padding:8px 12px;
+
+border:none;
+
+border-radius:6px;
+
+cursor:pointer;
+
+font-weight:600;
+
+}
+
+.add-btn{
+
+background:#3b82f6;
+
+color:white;
+
+}
+
+
+/* BOARD */
+
+.board{
+
+display:flex;
+
+gap:25px;
+
+padding:40px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+
+/* COLUMNS */
+
+.column{
+
+width:300px;
+
+min-height:420px;
+
+padding:18px;
+
+border-radius:16px;
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,0.15);
+
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+
+}
+
+.column h2{
+
+font-size:20px;
+
+font-weight:800;
+
+margin-bottom:15px;
+
+}
+
+
+/* TASK CARD */
+
+.task{
+
+padding:14px;
+
+border-radius:12px;
+
+margin-bottom:12px;
+
+background:rgba(255,255,255,0.1);
+
+border:1px solid rgba(255,255,255,0.15);
+
+box-shadow:0 8px 20px rgba(0,0,0,0.5);
+
+}
+
+/* TASK TITLE */
+
+.task strong{
+
+font-size:16px;
+
+font-weight:800;
+
+color:#ffffff;
+
+}
+
+.light .task strong{
+
+color:#111827;
+
+}
+
+.task p{
+
+font-size:14px;
+
+margin:6px 0;
+
+}
+
+.task small{
+
+font-size:12px;
+
+}
+
+
+/* PRIORITY */
+
+.priority{
+
+padding:3px 8px;
+
+border-radius:6px;
+
+font-size:11px;
+
+font-weight:700;
+
+color:white;
+
+}
+
+.high{background:#ef4444;}
+.medium{background:#f59e0b;}
+.low{background:#10b981;}
+
+
+/* DELETE BUTTON */
+
+.task button{
+
+margin-top:6px;
+
+padding:4px 8px;
+
+font-size:12px;
+
+background:#ef4444;
+
+color:white;
+
+border:none;
+
+border-radius:4px;
+
+cursor:pointer;
+
+}
+
+
+/* DASHBOARD */
+
+.dashboard{
+
+width:350px;
+
+margin:30px auto;
+
+padding:20px;
+
+background:rgba(255,255,255,0.08);
+
+border-radius:14px;
+
+backdrop-filter:blur(10px);
+
+}
+
+
+/* PROGRESS BAR */
+
+.progress-wrapper{
+
+margin-top:20px;
+
+}
+
+.progress-bar{
+
+height:12px;
+
+background:#334155;
+
+border-radius:10px;
+
+overflow:hidden;
+
+}
+
+#progressFill{
+
+height:100%;
+
+width:0%;
+
+background:linear-gradient(90deg,#22c55e,#16a34a);
+
+transition:0.4s;
+
+}
+
+
+/* MODAL */
+
+.modal{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.6);
+
+justify-content:center;
+align-items:center;
+
+}
+
+.modal-content{
+
+background:white;
+
+color:black;
+
+padding:25px;
+
+border-radius:12px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+width:300px;
+
+}
+
+.modal input,
+.modal textarea,
+.modal select{
+
+padding:10px;
+
+border-radius:6px;
+
+border:1px solid #ddd;
+
+}
+
+
+/* CALENDAR */
+
+#calendarView{
+
+display:none;
+
+width:90%;
+
+margin:40px auto;
+
+background:rgba(255,255,255,0.08);
+
+padding:20px;
+
+border-radius:16px;
+
+backdrop-filter:blur(12px);
+
+}
+
+canvas{
+
+filter:brightness(1.2);
+
+}

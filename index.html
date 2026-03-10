@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kanban Boardify</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Kanban Boardify</h1>
+
+<div class="header-actions">
+
+<input id="search" placeholder="Search task..." onkeyup="searchTasks()">
+
+<button onclick="showBoard()">Board</button>
+
+<button onclick="showCalendar()">Calendar</button>
+
+<button onclick="toggleTheme()">🌙</button>
+
+<button onclick="openModal()" class="add-btn">+ Add Task</button>
+
+</div>
+
+</header>
+
+
+<div class="dashboard">
+
+<canvas id="taskChart"></canvas>
+
+<div class="progress-wrapper">
+
+<h3>Project Progress</h3>
+
+<div class="progress-bar">
+<div id="progressFill"></div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="board">
+
+<div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+<h2>Todo</h2>
+<div class="task-container"></div>
+</div>
+
+<div class="column" id="progress" ondrop="drop(event)" ondragover="allowDrop(event)">
+<h2>In Progress</h2>
+<div class="task-container"></div>
+</div>
+
+<div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+<h2>Done</h2>
+<div class="task-container"></div>
+</div>
+
+</div>
+
+
+<div id="calendarView">
+
+<div id="calendar"></div>
+
+</div>
+
+
+<div class="modal" id="taskModal">
+
+<div class="modal-content">
+
+<h3>Add Task</h3>
+
+<input id="title" placeholder="Task Title">
+
+<textarea id="description" placeholder="Description"></textarea>
+
+<label>Deadline</label>
+<input type="date" id="deadline">
+
+<label>Priority</label>
+
+<select id="priority">
+<option value="low">Low</option>
+<option value="medium">Medium</option>
+<option value="high">High</option>
+</select>
+
+<button onclick="addTask()">Add Task</button>
+
+<button onclick="closeModal()">Cancel</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
