@@ -49,8 +49,8 @@ gap:6px;
 /* Tiny Logo */
 
 .logo-title img{
-width:16px;
-height:16px;
+width:5px;
+height:5px;
 object-fit:contain;
 }
 
@@ -388,5 +388,6 @@ filter:brightness(1.2);
 
 
 }
+
 
 
