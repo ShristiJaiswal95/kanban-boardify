@@ -33,6 +33,15 @@ backdrop-filter:blur(10px);
 }
 
 /* LOGO */
+.logo{
+width:16px !important;
+height:16px !important;
+max-width:16px;
+max-height:16px;
+object-fit:contain;
+display:block;
+}
+
 
 .logo-title{
 display:flex;
@@ -41,8 +50,8 @@ gap:6px;
 }
 
 .logo-title img{
-width:14px;
-height:14px;
+width:5px;
+height:5px;
 object-fit:contain;
 }
 
@@ -233,3 +242,4 @@ background:rgba(255,255,255,0.08);
 padding:20px;
 border-radius:16px;
 }
+
