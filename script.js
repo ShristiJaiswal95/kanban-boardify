@@ -10,16 +10,10 @@ document.querySelectorAll(".task-container").forEach(c=>c.innerHTML="")
 
 filteredTasks.forEach(task=>{
 
-let overdue = task.deadline && new Date(task.deadline) < new Date() && task.status!="done"
-
 let div=document.createElement("div")
-
 div.className="task"
-
 div.id=task.id
-
 div.draggable=true
-
 div.ondragstart=drag
 
 div.innerHTML=`
@@ -110,7 +104,6 @@ let task=tasks.find(t=>t.id==id)
 task.status=column
 
 save()
-
 render()
 
 }
@@ -127,6 +120,9 @@ function toggleTheme(){
 document.body.classList.toggle("light")
 }
 
+
+/* PIE CHART */
+
 let chart
 
 function updateChart(){
@@ -134,8 +130,6 @@ function updateChart(){
 let todo=tasks.filter(t=>t.status=="todo").length
 let progress=tasks.filter(t=>t.status=="progress").length
 let done=tasks.filter(t=>t.status=="done").length
-
-let data=[todo,progress,done]
 
 if(chart) chart.destroy()
 
@@ -146,24 +140,17 @@ type:"pie",
 data:{
 labels:["Todo","In Progress","Done"],
 datasets:[{
-data,
+data:[todo,progress,done],
 backgroundColor:["#3b82f6","#f59e0b","#22c55e"]
 }]
-},
-
-options:{
-plugins:{
-legend:{
-labels:{
-color:getComputedStyle(document.body).color
-}
-}
-}
 }
 
 })
 
 }
+
+
+/* PROGRESS */
 
 function updateProgress(){
 
@@ -185,16 +172,8 @@ function initCalendar(){
 let calendarEl=document.getElementById("calendar")
 
 calendar=new FullCalendar.Calendar(calendarEl,{
-
 initialView:"dayGridMonth",
-
-height:650,
-
-events:tasks.map(t=>({
-title:t.title,
-start:t.deadline
-}))
-
+height:650
 })
 
 calendar.render()
@@ -208,16 +187,12 @@ if(!calendar) return
 calendar.removeAllEvents()
 
 tasks.forEach(task=>{
-
 if(task.deadline){
-
 calendar.addEvent({
 title:task.title,
 start:task.deadline
 })
-
 }
-
 })
 
 }
@@ -225,7 +200,6 @@ start:task.deadline
 function showCalendar(){
 
 document.querySelector(".board").style.display="none"
-
 document.getElementById("calendarView").style.display="block"
 
 if(!calendar) initCalendar()
@@ -237,7 +211,6 @@ updateCalendar()
 function showBoard(){
 
 document.querySelector(".board").style.display="flex"
-
 document.getElementById("calendarView").style.display="none"
 
 }
