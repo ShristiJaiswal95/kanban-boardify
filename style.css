@@ -50,8 +50,8 @@ gap:6px;
 }
 
 .logo-title img{
-width:10px;
-height:10px;
+width:20px;
+height:20px;
 object-fit:contain;
 }
 
@@ -242,5 +242,6 @@ background:rgba(255,255,255,0.08);
 padding:20px;
 border-radius:16px;
 }
+
 
 
