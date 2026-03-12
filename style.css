@@ -49,10 +49,10 @@ align-items:center;
 gap:6px;
 }
 
-.logo-title img{
-width:20px;
-height:20px;
-object-fit:contain;
+.logo img {
+  width: 40px;   /* adjust to your preferred size */
+  height: 40px;
+  object-fit: contain;
 }
 
 .logo-title h1{
@@ -242,6 +242,7 @@ background:rgba(255,255,255,0.08);
 padding:20px;
 border-radius:16px;
 }
+
 
 
 
