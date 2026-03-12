@@ -4,25 +4,18 @@ padding:0;
 box-sizing:border-box;
 font-family:'Manrope',sans-serif;
 }
-
 /* DARK MODE */
-
 body{
 background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
 color:#f8fafc;
 min-height:100vh;
 }
-
 /* LIGHT MODE */
-
 .light{
 background:#f1f5f9;
 color:#111827;
 }
-
-
 /* HEADER */
-
 header{
 display:flex;
 justify-content:space-between;
@@ -31,49 +24,34 @@ padding:20px 40px;
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(10px);
 }
-
 /* LOGO */
 .logo{
-width:16px !important;
-height:16px !important;
-max-width:16px;
-max-height:16px;
-object-fit:contain;
 display:block;
 }
-
-
 .logo-title{
 display:flex;
 align-items:center;
-gap:6px;
+gap:10px;
 }
-
 .logo img {
-  width: 40px;   /* adjust to your preferred size */
+  width: 40px;
   height: 40px;
   object-fit: contain;
 }
-
 .logo-title h1{
 font-size:24px;
 font-weight:800;
 }
-
-
 /* HEADER ACTIONS */
-
 .header-actions{
 display:flex;
 gap:10px;
 }
-
 #search{
 padding:8px;
 border-radius:6px;
 border:none;
 }
-
 button{
 padding:8px 12px;
 border:none;
@@ -81,15 +59,11 @@ border-radius:6px;
 cursor:pointer;
 font-weight:600;
 }
-
 .add-btn{
 background:#3b82f6;
 color:white;
 }
-
-
 /* DASHBOARD */
-
 .dashboard{
 width:350px;
 margin:30px auto;
@@ -98,26 +72,19 @@ background:rgba(255,255,255,0.08);
 border-radius:14px;
 backdrop-filter:blur(10px);
 }
-
-
 /* PROGRESS BAR */
-
 .progress-bar{
 height:12px;
 background:#334155;
 border-radius:10px;
 overflow:hidden;
 }
-
 #progressFill{
 height:100%;
 width:0%;
 background:linear-gradient(90deg,#22c55e,#16a34a);
 }
-
-
 /* BOARD */
-
 .board{
 display:flex;
 gap:25px;
@@ -125,10 +92,7 @@ padding:40px;
 justify-content:center;
 flex-wrap:wrap;
 }
-
-
 /* COLUMNS */
-
 .column{
 width:300px;
 min-height:420px;
@@ -138,40 +102,30 @@ background:rgba(255,255,255,0.08);
 backdrop-filter:blur(18px);
 border:1px solid rgba(255,255,255,0.15);
 }
-
 .column h2{
 font-weight:800;
 margin-bottom:15px;
 }
-
-
 /* TASK */
-
 .task{
 padding:14px;
 border-radius:12px;
 margin-bottom:12px;
 background:rgba(255,255,255,0.1);
 }
-
 .task strong{
 font-size:16px;
 font-weight:800;
 color:#fff;
 }
-
 .light .task strong{
 color:#111827;
 }
-
 .task p{
 font-size:14px;
 margin:6px 0;
 }
-
-
 /* PRIORITY */
-
 .priority{
 padding:3px 8px;
 border-radius:6px;
@@ -179,14 +133,10 @@ font-size:11px;
 font-weight:700;
 color:white;
 }
-
 .high{background:#ef4444;}
 .medium{background:#f59e0b;}
 .low{background:#10b981;}
-
-
 /* DELETE BUTTON */
-
 .task button{
 margin-top:6px;
 padding:4px 8px;
@@ -196,10 +146,7 @@ border:none;
 border-radius:4px;
 cursor:pointer;
 }
-
-
 /* MODAL */
-
 .modal{
 display:none;
 position:fixed;
@@ -211,7 +158,6 @@ background:rgba(0,0,0,0.6);
 justify-content:center;
 align-items:center;
 }
-
 .modal-content{
 background:white;
 color:black;
@@ -222,7 +168,6 @@ flex-direction:column;
 gap:10px;
 width:300px;
 }
-
 .modal input,
 .modal textarea,
 .modal select{
@@ -230,10 +175,7 @@ padding:10px;
 border-radius:6px;
 border:1px solid #ddd;
 }
-
-
 /* CALENDAR */
-
 #calendarView{
 display:none;
 width:90%;
@@ -242,7 +184,3 @@ background:rgba(255,255,255,0.08);
 padding:20px;
 border-radius:16px;
 }
-
-
-
-
