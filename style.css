@@ -26,20 +26,15 @@ backdrop-filter:blur(10px);
 }
 /* LOGO */
 .logo{
+width:32px;
+height:32px;
+object-fit:contain;
 display:block;
 }
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  width: 32px;
-  height: 32px;
-  object-fit: cover;
-  border-radius: 6px;
-  overflow: hidden;
+.logo-title{
+display:flex;
+align-items:center;
+gap:10px;
 }
 .logo-title h1{
 font-size:24px;
@@ -187,10 +182,3 @@ background:rgba(255,255,255,0.08);
 padding:20px;
 border-radius:16px;
 }
-
-
-
-
-
-
-
